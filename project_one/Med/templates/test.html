@@ -1,0 +1,34 @@
+<!-- your_app/templates/your_app/appointment_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment List</title>
+</head>
+<body>
+    <h1>Appointment List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>TID</th>
+                <th>Patient Name</th>
+                <th>Appointment Date</th>
+                <th>Department</th>
+                <th>Phone number</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.tid }}</td>
+                <td>{{ appointment.name }}</td>
+                <td>{{ appointment.date }}</td>
+                <td>{{ appointment.department }}</td>
+                <td>{{ appointment.phone }}</td>
+                <td>{{ appointment.message }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

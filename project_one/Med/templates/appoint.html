@@ -1,0 +1,96 @@
+{% extends 'base2.html' %}
+{% block title %}Appointment-Form{% endblock %}
+{% load static %}
+{% comment %} <link rel="stylesheet" href="{% static 'css/dash.css' %}"> {% endcomment %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 col-sm-6 appointment-form">
+        <!-- CONTACT FORM HERE -->
+        <form class="appointment-form" role="form" method="post" action="#">
+            {% csrf_token %}
+
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                <h2>Make an appointment</h2>
+            </div>
+
+            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="date">Select Date</label>
+                        <input type="date" name="date" value="" class="form-control">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="time">Select Time</label>
+                        <input type="time" name="time" value="" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="select">Select Department</label>
+                    <select class="form-control" name="department" id="department">
+                        <option value="General Health">General Health</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dental">Dental</option>
+                        <option value="Medical Research">Medical Research</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="Message">Additional Message</label>
+                    <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6 col-sm-6 appointment-details">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+            <h2>Appointment Details</h2>
+        </div>
+
+        <!-- Appointment Table -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Appointment Number</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Replace the following content with your dynamic appointment data -->
+                <tr>
+                    <td>Appointment #1</td>
+                    <td>Scheduled</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="cancelAppointment(1)">Cancel</button></td>
+                </tr>
+                <tr>
+                    <td>Appointment #2</td>
+                    <td>Confirmed</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="cancelAppointment(2)">Cancel</button></td>
+                </tr>
+                <!-- End of dynamic appointment data -->
+            </tbody>
+        </table>
+        <!-- End of Appointment Table -->
+    </div>
+</div>
+{% endblock %}

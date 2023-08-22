@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}About Medeon {% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="mb-4">About Us</h2>
+        <p>
+            Medeon Care is a healthcare organization committed to providing top-quality medical services and care for our patients. We strive to deliver compassionate and personalized care to ensure the well-being of every individual we serve.
+        </p>
+        <p>
+            Our team of experienced healthcare professionals, including doctors, nurses, and support staff, is dedicated to delivering comprehensive medical care and promoting a healthy lifestyle for our patients.
+        </p>
+        <p>
+            At Medeon Care, we value the trust our patients place in us and continuously work towards maintaining the highest standards of healthcare excellence. Our state-of-the-art facilities and advanced medical technologies enable us to offer a wide range of medical services, from general consultations to specialized treatments.
+        </p>
+        <p>
+            For more information or to schedule an appointment, please contact us via email at <a href="mailto:info@medeoncare.com">info@medeoncare.com</a> or call us at <a href="tel:010-060-0160">010-060-0160</a>.
+        </p>
+
+        <hr>
+
+        <h3>Enquiry Form</h3><br>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_name">Name:</label>
+                <input type="text" name="name" id="id_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_email">Email:</label>
+                <input type="email" name="email" id="id_email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_message">Any Query or Message:</label>
+                <textarea name="message" id="id_message" class="form-control" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+        </form>
+        <h5>Medeon's philosophy is that each and every growth industry has its unique needs. Our focus is on knowledge-intensive companies in the life science field (pharmaceuticals, medical technology, biotechnology and healthcare). Among the advantages of a stimulating corporate climate with an ideal locations.</h5>
+    </div>
+{% endblock %}
+
+
+    

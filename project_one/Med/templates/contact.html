@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="container p-0">
+        <div class="row no-gutters">
+            <div class="col-md-6 col-12 order-md-2">
+                <img src="{% static 'images/callgirl.jpg' %}" alt="Contact Me" class="img-fluid w-100" style="max-height: 500px; width: 50%;">
+            </div>  
+            <div class="col-md-6 col-12 bg-dark text-light p-4 d-flex align-items-center">
+                <div>
+                    <h2 class="mb-4">Contact Us</h2>
+                    <p class="lead">
+                        Thank you for visiting us! If you have any questions, inquiries, or just want to say hello, feel free to get in touch using the contact information below.
+                    </p>
+                    <div class="mt-4">
+                        <label>Email:</label>
+                        <p>info@medeoncare.com</p>
+                        <label>Phone:</label>
+                        <p>010-060-0160</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

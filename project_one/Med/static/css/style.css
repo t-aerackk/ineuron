@@ -1,0 +1,88 @@
+/* Custom CSS for Dashboard */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #343a40;
+    color: #ffffff;
+    display: inline;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+    padding-left: 20px;
+  }
+  
+  .nav-links li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Sidebar */
+  .list-group-item.active {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  /* Cards */
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Slider */
+  .slider-container {
+    padding: 20px;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  /* Progress Bars */
+  .progress-container {
+    padding: 20px;
+  }
+  
+  .progress {
+    height: 20px;
+  }
+  
+  .progress-bar {
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Table */
+  .table-container {
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
